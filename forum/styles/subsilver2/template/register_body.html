@@ -1,0 +1,49 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_REGISTER}</h2>
+
+<div class="panel">
+<div class="inner"><span class="corners-top"><span></span></span>
+
+<div class="content">
+<!-- IF S_SUCCESS -->
+{MESSAGE}
+<!-- ELSE -->
+   <!-- IF MESSAGE_ERROR -->
+   <font color="red"><b>{MESSAGE_ERROR}</b></font>
+   <!-- ENDIF -->
+   <form method="post">
+      <table>
+         <tr>
+            <td align="right">{L_USERNAME}:</td>
+            <td><input type="text" tabindex="1" name="username" size="25" value="{USERNAME}" /></td>
+         </tr>
+         <tr>
+            <td align="right">{L_PASSWORD}:</td>
+            <td><input type="password" tabindex="2" name="password" size="25" value="{PASSWORD}" /></td>
+         </tr>
+         <tr>
+            <td align="right">{L_CONFIRM_PASSWORD}:</td>
+            <td><input type="password" tabindex="3" name="password_confirm" size="25" value="{PASSWORD_CONFIRM}" /></td>
+         </tr>
+         <tr>
+            <td align="right">{L_EMAIL_ADDRESS}:</td>
+            <td><input type="text" tabindex="4" name="email" size="25" maxlength="100" value="{EMAIL}" /></td>
+         </tr>
+         <tr>
+            <td align="right">{L_CONFIRM_EMAIL}:</td>
+            <td><input type="text" tabindex="5" name="email_confirm" size="25" maxlength="100" value="{EMAIL_CONFIRM}" /></td>
+         </tr>
+         <tr>
+            <td colspan="2" align="center">
+               <input type="reset" value="{L_RESET}" name="reset" />&nbsp;
+               <input type="submit" name="submit" id ="submit" value="{L_SUBMIT}" />
+            </td>
+         </tr>
+      </table>
+   </form>
+<!-- ENDIF -->
+</div>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

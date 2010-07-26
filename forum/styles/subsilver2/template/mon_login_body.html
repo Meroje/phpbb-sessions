@@ -1,0 +1,50 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>Mon Login</h2>
+
+<div class="panel">
+<div class="inner"><span class="corners-top"><span></span></span>
+
+<div class="content">
+<!-- IF S_REGISTERED -->
+   {L_WELCOME} {USERNAME}<br />
+   <a href="{U_LOGOUT}">{L_LOGOUT}</a>
+<!-- ELSE -->
+   <!-- IF S_ERROR -->
+   <font color="red"><b>{S_ERROR}</b></font>
+   <!-- ENDIF -->
+   <form method="post">
+   <table>
+      <tr>
+         <td align="right">{L_USERNAME}:</td>
+         <td><input type="text" tabindex="1" name="username" size="25" /></td>
+      </tr>
+      <tr>
+         <td align="right">{L_PASSWORD}:</td>
+         <td><input type="password" tabindex="2" name="password" size="25" />
+         <br /><a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+         </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td><input type="checkbox" name="autologin" tabindex="3" />{L_LOG_ME_IN}</td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td><input type="checkbox" name="viewonline" tabindex="4" />{L_HIDE_ME}</td>
+      </tr>
+      <tr>
+         <td colspan="2" align="center"><input type="submit" name="login" tabindex="5" value="{L_LOGIN}" /></td>
+      </tr>
+   </table>
+   </form>
+<!-- ENDIF -->
+</div>
+
+<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->
